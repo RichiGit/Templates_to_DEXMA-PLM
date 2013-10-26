@@ -3,9 +3,9 @@
 	<property name="ireport.scriptlethandling" value="0"/>
 	<property name="net.sf.jasperreports.export.text.character.width" value="7.238"/>
 	<property name="net.sf.jasperreports.export.text.character.height" value="13.948"/>
-	<property name="ireport.zoom" value="1.8150000000000306"/>
-	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="595"/>
+	<property name="ireport.zoom" value="1.9965000000000366"/>
+	<property name="ireport.x" value="15"/>
+	<property name="ireport.y" value="754"/>
 	<import value="net.sf.jasperreports.engine.*"/>
 	<import value="java.util.*"/>
 	<import value="net.sf.jasperreports.engine.data.*"/>
@@ -59,7 +59,7 @@
 						<rightPen lineWidth="1.0"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="GOST type A"/>
+						<font fontName="GOST type A" isItalic="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{section} == null ? "Прочие изделия":$F{section}.equals("Assemblies") ? "Сборочные единицы":$F{section}.equals("Parts") ? "Детали":$F{section}.equals("Purchasable Parts") ? "Покупные изделия":$F{section}.equals("Materials") ? "Материалы"  :""]]></textFieldExpression>
 				</textField>
@@ -78,7 +78,7 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" markup="none">
-					<font fontName="GOST type A" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
 					<paragraph lineSpacing="AtLeast"/>
 				</textElement>
 				<text><![CDATA[Формат]]></text>
@@ -93,7 +93,7 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" markup="none">
-					<font fontName="GOST type A" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
 				<text><![CDATA[Зона]]></text>
@@ -108,7 +108,7 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
-					<font fontName="GOST type A" size="12" isBold="true"/>
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true"/>
 				</textElement>
 				<text><![CDATA[Поз.]]></text>
 			</staticText>
@@ -122,7 +122,7 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="GOST type A" size="12" isBold="true"/>
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true"/>
 				</textElement>
 				<text><![CDATA[Наименование]]></text>
 			</staticText>
@@ -136,7 +136,7 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
-					<font fontName="GOST type A" size="12" isBold="true"/>
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true"/>
 				</textElement>
 				<text><![CDATA[Кол.]]></text>
 			</staticText>
@@ -150,7 +150,7 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="GOST type A" size="12" isBold="true"/>
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true"/>
 				</textElement>
 				<text><![CDATA[Приме-
 чание]]></text>
@@ -165,7 +165,7 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="GOST type A" size="12" isBold="true"/>
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true"/>
 				</textElement>
 				<text><![CDATA[Обозначение]]></text>
 			</staticText>
@@ -183,7 +183,7 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="GOST type A"/>
+					<font fontName="GOST type A" isItalic="true"/>
 				</textElement>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
@@ -196,7 +196,7 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="GOST type A"/>
+					<font fontName="GOST type A" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{position}]]></textFieldExpression>
 			</textField>
@@ -210,7 +210,7 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="GOST type A"/>
+					<font fontName="GOST type A" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{zone}]]></textFieldExpression>
 			</textField>
@@ -224,7 +224,7 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="GOST type A"/>
+					<font fontName="GOST type A" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{section}==null ||$F{section}.isEmpty()||$F{section}.equals("Materials") ||$F{section}.equals("Purchasable Parts") ? ((Map)$F{attrMap}).get("[Display Name]") : ((Map)$F{attrMap}).get("[Name]")]]></textFieldExpression>
 			</textField>
@@ -238,7 +238,7 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="GOST type A"/>
+					<font fontName="GOST type A" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
 			</textField>
@@ -252,7 +252,7 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="GOST type A"/>
+					<font fontName="GOST type A" size="10" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{note}]]></textFieldExpression>
 			</textField>
@@ -266,7 +266,7 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="GOST type A"/>
+					<font fontName="GOST type A" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[((Map)$F{attrMap}).get("[Designation]")]]></textFieldExpression>
 			</textField>
@@ -340,7 +340,7 @@
 			<textField>
 				<reportElement uuid="4381d375-a02b-4aa2-928f-2f191e380c73" x="185" y="578" width="190" height="70"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="GOST type A" size="16"/>
+					<font fontName="GOST type A" size="16" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{objectName}]]></textFieldExpression>
 			</textField>
@@ -417,19 +417,13 @@
 				</graphicElement>
 			</rectangle>
 			<rectangle>
-				<reportElement uuid="fc7b3acd-3320-45ce-b0b7-fc998292c81c" mode="Transparent" x="20" y="578" width="28" height="70"/>
-				<graphicElement>
-					<pen lineWidth="2.0"/>
-				</graphicElement>
-			</rectangle>
-			<rectangle>
 				<reportElement uuid="bfbbd86c-b174-43c2-8d81-c9d43c5e3a6f" mode="Transparent" x="115" y="578" width="42" height="70"/>
 				<graphicElement>
 					<pen lineWidth="2.0"/>
 				</graphicElement>
 			</rectangle>
 			<rectangle>
-				<reportElement uuid="794fe8f4-9e2f-4761-b7d6-52e3310afb9e" mode="Transparent" x="0" y="578" width="20" height="70"/>
+				<reportElement uuid="794fe8f4-9e2f-4761-b7d6-52e3310afb9e" mode="Transparent" x="0" y="578" width="48" height="70"/>
 				<graphicElement>
 					<pen lineWidth="2.0"/>
 				</graphicElement>
@@ -456,13 +450,10 @@
 				<reportElement uuid="85fe05e2-258a-48dc-9b59-7481155ec8b2" mode="Transparent" x="157" y="536" width="28" height="14"/>
 			</rectangle>
 			<rectangle>
-				<reportElement uuid="3e87bb82-32e3-4e31-9922-bf2f0ba9800e" mode="Transparent" x="0" y="592" width="20" height="14"/>
+				<reportElement uuid="3e87bb82-32e3-4e31-9922-bf2f0ba9800e" mode="Transparent" x="0" y="592" width="48" height="14"/>
 			</rectangle>
 			<rectangle>
 				<reportElement uuid="7b766a71-eab1-4f2f-901a-fff80075bae2" mode="Transparent" x="157" y="592" width="28" height="14"/>
-			</rectangle>
-			<rectangle>
-				<reportElement uuid="e3fb2ea4-8285-4dba-9db5-4a61a93a56ee" mode="Transparent" x="20" y="592" width="28" height="14"/>
 			</rectangle>
 			<rectangle>
 				<reportElement uuid="bd9adb38-6d3a-4f72-93bd-8a905815864b" mode="Transparent" x="115" y="592" width="42" height="14"/>
@@ -471,13 +462,10 @@
 				<reportElement uuid="9a945e53-0200-4e75-8453-806003ae56e2" mode="Transparent" x="48" y="592" width="67" height="14"/>
 			</rectangle>
 			<rectangle>
-				<reportElement uuid="64bfa08f-dbdd-413f-a1ef-b9c3d04cd422" mode="Transparent" x="0" y="606" width="20" height="14"/>
+				<reportElement uuid="64bfa08f-dbdd-413f-a1ef-b9c3d04cd422" mode="Transparent" x="0" y="606" width="48" height="14"/>
 			</rectangle>
 			<rectangle>
 				<reportElement uuid="a8b3cec9-a65a-4388-8fc4-066ba2564fc0" mode="Transparent" x="157" y="606" width="28" height="14"/>
-			</rectangle>
-			<rectangle>
-				<reportElement uuid="045fc511-d65c-4a02-8ac3-7e6735b35f79" mode="Transparent" x="20" y="606" width="28" height="14"/>
 			</rectangle>
 			<rectangle>
 				<reportElement uuid="3eacd7bc-9e71-472b-8ba8-a3c956470e5a" mode="Transparent" x="115" y="606" width="42" height="14"/>
@@ -486,13 +474,10 @@
 				<reportElement uuid="d12ab8ef-c62c-4680-8ce5-4e2eae67e422" mode="Transparent" x="48" y="606" width="67" height="14"/>
 			</rectangle>
 			<rectangle>
-				<reportElement uuid="b101e0e3-b85f-4766-b974-d7dd246c46c3" mode="Transparent" x="0" y="620" width="20" height="14"/>
+				<reportElement uuid="b101e0e3-b85f-4766-b974-d7dd246c46c3" mode="Transparent" x="0" y="620" width="48" height="14"/>
 			</rectangle>
 			<rectangle>
 				<reportElement uuid="de3c8ae6-6e3a-4386-b959-105cee175581" mode="Transparent" x="157" y="620" width="28" height="14"/>
-			</rectangle>
-			<rectangle>
-				<reportElement uuid="bafa1c60-7e3f-4d59-a8f6-e274fdc86d64" mode="Transparent" x="20" y="620" width="28" height="14"/>
 			</rectangle>
 			<rectangle>
 				<reportElement uuid="8b37fe6e-71f0-489b-966c-f5f04eae9cba" mode="Transparent" x="115" y="620" width="42" height="14"/>
@@ -500,6 +485,101 @@
 			<rectangle>
 				<reportElement uuid="95a3ed78-c1fa-42f6-922a-8bfedf69dd90" mode="Transparent" x="48" y="620" width="67" height="14"/>
 			</rectangle>
+			<staticText>
+				<reportElement uuid="de7d75e8-e2b2-4476-833f-a681360358d5" x="0" y="564" width="20" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Изм.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="825d59a1-9ee4-4f9d-b811-879ce2b575b8" x="20" y="564" width="28" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Лист]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b3c767b8-1956-402c-8025-0800f69a1b31" x="48" y="564" width="67" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[№ Докум.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d43ddbb3-8461-451e-a57d-f14f9d36c3c5" x="157" y="564" width="28" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Дата]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="df1608d5-ecb3-4c55-b5cc-91f37ff89520" x="115" y="564" width="42" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Подп.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="aceb4c5b-9787-45a2-b9b4-54bc327f7b09" x="0" y="578" width="48" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Разраб.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ef273dc1-37c4-40fa-b651-f4e0fd69bb2f" x="0" y="592" width="48" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Пров.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="872cb45c-4b6d-44ce-a923-352fed5efb0e" x="0" y="634" width="48" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Утв.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="72fafefd-6333-4ba6-960f-91607a5da9fe" x="0" y="620" width="48" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Н.контр.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8bada388-59ea-4f47-b10b-9d1a491c7775" x="375" y="578" width="42" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Лит.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6616ea1d-0205-4f78-9c36-2d99bc33e0db" x="417" y="578" width="45" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Лист]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="796f8ac5-7738-4e49-9fce-ff3fcb974046" x="462" y="578" width="63" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Листов]]></text>
+			</staticText>
+			<textField evaluationTime="Report">
+				<reportElement uuid="a60e139a-8b98-4a61-b0e5-147ea3e8dbad" x="462" y="592" width="63" height="14" isPrintInFirstWholeBand="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
 		</band>
 	</pageFooter>
 </jasperReport>
