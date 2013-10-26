@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TextReport" pageWidth="798" pageHeight="1000" whenNoDataType="AllSectionsNoDetail" columnWidth="714" leftMargin="42" rightMargin="42" topMargin="20" bottomMargin="25" uuid="48159589-7e1c-464f-bd93-70ce2ed13b9c">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TextReport" pageWidth="595" pageHeight="841" whenNoDataType="AllSectionsNoDetail" columnWidth="525" leftMargin="56" rightMargin="14" topMargin="14" bottomMargin="14" uuid="48159589-7e1c-464f-bd93-70ce2ed13b9c">
 	<property name="ireport.scriptlethandling" value="0"/>
 	<property name="net.sf.jasperreports.export.text.character.width" value="7.238"/>
 	<property name="net.sf.jasperreports.export.text.character.height" value="13.948"/>
-	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.zoom" value="2.923075650000046"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<import value="net.sf.jasperreports.engine.*"/>
@@ -48,72 +48,22 @@
 	<group name="sectionGroup">
 		<groupExpression><![CDATA[$F{section}]]></groupExpression>
 		<groupHeader>
-			<band height="23">
-				<staticText>
-					<reportElement uuid="3ae18ca7-d022-4786-beab-ae5986732e01" x="0" y="0" width="265" height="23"/>
-					<box>
-						<topPen lineWidth="1.0" lineStyle="Solid"/>
-						<leftPen lineWidth="1.0" lineStyle="Solid"/>
-						<bottomPen lineWidth="1.0" lineStyle="Solid"/>
-					</box>
-					<textElement/>
-					<text><![CDATA[]]></text>
-				</staticText>
-				<textField>
-					<reportElement uuid="6ccf8608-b619-40a8-a46e-70196668da5a" x="265" y="0" width="449" height="23"/>
-					<box leftPadding="10">
-						<pen lineWidth="1.0"/>
-						<topPen lineWidth="1.0"/>
-						<leftPen lineWidth="0.0" lineStyle="Solid"/>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
-					</box>
-					<textElement textAlignment="Left" verticalAlignment="Middle">
-						<font fontName="Times New Roman" size="13" isBold="true"/>
+			<band height="22">
+				<textField pattern="" isBlankWhenNull="true">
+					<reportElement uuid="9795b026-5b77-4294-a5b9-f8c299e666cb" mode="Transparent" x="0" y="0" width="525" height="22" forecolor="#000000" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+						<font fontName="GOST type A" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{section} == null ? "Прочие изделия":$F{section}.equals("Assemblies") ? "Сборочные единицы":$F{section}.equals("Parts") ? "Детали":$F{section}.equals("Purchasable Parts") ? "Покупные изделия":$F{section}.equals("Materials") ? "Материалы"  :""]]></textFieldExpression>
 				</textField>
 			</band>
 		</groupHeader>
 	</group>
-	<title>
-		<band height="100">
-			<staticText>
-				<reportElement uuid="d08dfe62-4c09-483f-95a0-5bb74de739f6" x="0" y="20" width="714" height="45"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="32" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Спецификация]]></text>
-			</staticText>
-			<textField pattern="dd/MM/yyyy HH.mm.ss">
-				<reportElement uuid="22242522-40b8-4f35-a68c-ea99faf959f9" x="607" y="0" width="107" height="32"/>
-				<box leftPadding="5"/>
-				<textElement>
-					<font fontName="Times New Roman"/>
-				</textElement>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="e8e4e056-123e-427b-8191-098cb910b794" x="1" y="65" width="536" height="34"/>
-				<box leftPadding="180"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="18" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$P{objectName}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="1603d4c4-0bbf-4e37-be24-93d379c652c2" x="537" y="66" width="178" height="34"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="13"/>
-				</textElement>
-				<textFieldExpression><![CDATA[($P{configStr} == null || $P{configStr}.isEmpty()) ? null : "Options: " + $P{configStr}]]></textFieldExpression>
-			</textField>
-		</band>
-	</title>
 	<columnHeader>
-		<band height="42">
+		<band height="43">
 			<staticText>
-				<reportElement uuid="aebce648-180a-4075-bd0f-1c3714cd3d83" x="0" y="0" width="36" height="42"/>
+				<reportElement uuid="0261871b-77df-480e-9f63-e7aed4d24bf9" mode="Transparent" x="0" y="0" width="17" height="43" forecolor="#000000" backcolor="#FFFFFF"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -121,13 +71,29 @@
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="12" isBold="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" markup="none">
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="AtLeast"/>
+				</textElement>
+				<text><![CDATA[Формат]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="aebce648-180a-4075-bd0f-1c3714cd3d83" mode="Transparent" x="17" y="0" width="18" height="43" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" markup="none">
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
 				</textElement>
 				<text><![CDATA[Зона]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="b342d014-df41-4bbc-9e26-f202f120d97e" x="36" y="0" width="58" height="42"/>
+				<reportElement uuid="b342d014-df41-4bbc-9e26-f202f120d97e" x="35" y="0" width="22" height="43"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -135,13 +101,13 @@
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="12" isBold="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="GOST type A" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Поз.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="8dc7abfc-3f55-4d1c-800d-2bece4b7985a" x="265" y="0" width="177" height="42"/>
+				<reportElement uuid="8dc7abfc-3f55-4d1c-800d-2bece4b7985a" x="255" y="0" width="179" height="43"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -150,12 +116,12 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="12" isBold="true"/>
+					<font fontName="GOST type A" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Наименование]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="d7b17e44-b85a-489e-89e5-18de07fb038d" x="442" y="0" width="54" height="42"/>
+				<reportElement uuid="d7b17e44-b85a-489e-89e5-18de07fb038d" x="434" y="0" width="28" height="43"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -163,13 +129,13 @@
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="12" isBold="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="GOST type A" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Кол.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="e04bdac5-403e-4914-9e5d-e66b118667a0" x="496" y="0" width="40" height="42"/>
+				<reportElement uuid="4ac84714-3f32-4035-ae92-01f4566305a7" x="462" y="0" width="63" height="43"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -178,12 +144,13 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="12" isBold="true"/>
+					<font fontName="GOST type A" size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Ед. Изм.]]></text>
+				<text><![CDATA[Приме-
+чание]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="4ac84714-3f32-4035-ae92-01f4566305a7" x="536" y="0" width="178" height="42"/>
+				<reportElement uuid="8dc7abfc-3f55-4d1c-800d-2bece4b7985a" x="57" y="0" width="198" height="43"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -192,30 +159,16 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Примечание]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="8dc7abfc-3f55-4d1c-800d-2bece4b7985a" x="94" y="0" width="171" height="42"/>
-				<box>
-					<pen lineWidth="1.0"/>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="12" isBold="true"/>
+					<font fontName="GOST type A" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Обозначение]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="30">
+		<band height="22">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="94bc682b-bc45-4f78-a385-73b07c12ef0f" stretchType="RelativeToTallestObject" x="36" y="0" width="58" height="30"/>
+				<reportElement uuid="d519868a-79fa-4afa-b83a-2583c7aeb11f" stretchType="RelativeToTallestObject" x="0" y="0" width="17" height="22"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -224,12 +177,25 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Times New Roman"/>
+					<font fontName="GOST type A"/>
+				</textElement>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="94bc682b-bc45-4f78-a385-73b07c12ef0f" stretchType="RelativeToTallestObject" x="35" y="0" width="22" height="22"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{position}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e6c82965-22ae-4cea-b7f4-eb23eaf09ee0" stretchType="RelativeToTallestObject" x="0" y="0" width="36" height="30"/>
+				<reportElement uuid="e6c82965-22ae-4cea-b7f4-eb23eaf09ee0" stretchType="RelativeToTallestObject" x="17" y="0" width="18" height="22"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -238,12 +204,12 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Times New Roman"/>
+					<font fontName="GOST type A"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{zone}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="54844850-b74b-4a0d-ba67-04ab4844893e" stretchType="RelativeToTallestObject" x="265" y="0" width="177" height="30"/>
+				<reportElement uuid="54844850-b74b-4a0d-ba67-04ab4844893e" stretchType="RelativeToTallestObject" x="255" y="0" width="179" height="22"/>
 				<box leftPadding="7" rightPadding="7">
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -252,13 +218,12 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="Times New Roman"/>
+					<font fontName="GOST type A"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{section}==null ||$F{section}.isEmpty()||$F{section}.equals("Materials") ||$F{section}.equals("Purchasable Parts") ? ((Map)$F{attrMap}).get("[Display Name]") : ((Map)$F{attrMap}).get("[Name]")
-]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{section}==null ||$F{section}.isEmpty()||$F{section}.equals("Materials") ||$F{section}.equals("Purchasable Parts") ? ((Map)$F{attrMap}).get("[Display Name]") : ((Map)$F{attrMap}).get("[Name]")]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="939a76f1-6c72-4221-adda-efa3f22b0194" stretchType="RelativeToTallestObject" x="442" y="0" width="54" height="30"/>
+				<reportElement uuid="939a76f1-6c72-4221-adda-efa3f22b0194" stretchType="RelativeToTallestObject" x="434" y="0" width="28" height="22"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -267,12 +232,12 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Times New Roman"/>
+					<font fontName="GOST type A"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="241ce885-eead-478f-9057-38f328a30f42" stretchType="RelativeToTallestObject" x="496" y="0" width="41" height="30"/>
+				<reportElement uuid="f597e1fc-c486-4f7d-90bf-5bc925b382c3" stretchType="RelativeToTallestObject" x="462" y="0" width="63" height="22"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -281,26 +246,12 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Times New Roman"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{measUnit}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f597e1fc-c486-4f7d-90bf-5bc925b382c3" stretchType="RelativeToTallestObject" x="537" y="0" width="177" height="30"/>
-				<box>
-					<pen lineWidth="1.0"/>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Times New Roman"/>
+					<font fontName="GOST type A"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{note}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
-				<reportElement uuid="54844850-b74b-4a0d-ba67-04ab4844893e" stretchType="RelativeToTallestObject" x="94" y="0" width="171" height="30"/>
+				<reportElement uuid="54844850-b74b-4a0d-ba67-04ab4844893e" stretchType="RelativeToTallestObject" x="57" y="0" width="198" height="22"/>
 				<box leftPadding="7" rightPadding="7">
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -309,7 +260,7 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="Times New Roman"/>
+					<font fontName="GOST type A"/>
 				</textElement>
 				<textFieldExpression><![CDATA[((Map)$F{attrMap}).get("[Designation]")]]></textFieldExpression>
 			</textField>
@@ -319,45 +270,20 @@
 		<band/>
 	</columnFooter>
 	<pageFooter>
-		<band height="58">
+		<band height="648">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="e8e4e056-123e-427b-8191-098cb910b794" x="144" y="121" width="290" height="34"/>
+				<box leftPadding="180"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{objectName}]]></textFieldExpression>
+			</textField>
 			<textField>
-				<reportElement uuid="b4f85b28-6f02-4a09-a278-d5a4e33b831d" x="555" y="36" width="119" height="20"/>
-				<textElement textAlignment="Right">
-					<font fontName="Times New Roman"/>
-				</textElement>
-				<textFieldExpression><![CDATA["Страница "+$V{PAGE_NUMBER}+" из"]]></textFieldExpression>
+				<reportElement uuid="0b47c0e4-12bd-4257-a264-18531def70ab" x="123" y="60" width="105" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
 			</textField>
-			<textField evaluationTime="Report">
-				<reportElement uuid="4d288e4b-2453-4747-a045-64bb71e47a9a" x="674" y="36" width="40" height="20"/>
-				<textElement>
-					<font fontName="Times New Roman"/>
-				</textElement>
-				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
-			</textField>
-			<break>
-				<reportElement uuid="3acb73b9-63a0-4171-a18d-87d69f37f057" x="0" y="36" width="714" height="1"/>
-			</break>
-			<staticText>
-				<reportElement uuid="83f12fe9-12b1-471d-b7f0-bc014711f772" x="52" y="36" width="213" height="20"/>
-				<textElement>
-					<font fontName="Times New Roman"/>
-				</textElement>
-				<text><![CDATA[Сформировано в системе Dexma]]></text>
-			</staticText>
-			<line>
-				<reportElement uuid="91da25eb-cc3a-49ef-9698-ffc82a84dcb5" x="1" y="24" width="714" height="1"/>
-			</line>
-			<staticText>
-				<reportElement uuid="7e53df2c-98fb-4087-a994-866c4eb23d89" x="496" y="36" width="100" height="20"/>
-				<textElement>
-					<font fontName="Times New Roman"/>
-				</textElement>
-				<text><![CDATA[]]></text>
-			</staticText>
-			<image>
-				<reportElement uuid="a76abf38-a6ea-469c-a085-f4c9956aed95" x="1" y="25" width="195" height="32"/>
-				<imageExpression><![CDATA["DEXMA_bf.gif"]]></imageExpression>
-			</image>
 		</band>
 	</pageFooter>
 </jasperReport>
