@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TextReport" pageWidth="595" pageHeight="841" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="48159589-7e1c-464f-bd93-70ce2ed13b9c">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="net.sf.jasperreports.export.text.character.width" value="7.238"/>
+	<property name="net.sf.jasperreports.export.text.character.height" value="13.948"/>
+	<property name="ireport.zoom" value="1.9965000000001882"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.layers" value="##Sat Nov 02 21:03:15 YEKT 2013\nlayer.1.name=\u041F\u043E\u0434\u043F\u0438\u0441\u044C\nlayer.1.visible=true\nlayer.1.id=1\nlayer.0.name=Background\nlayer.0.visible=true\nlayer.0.id=0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="FixSizeFontStyle" isDefault="true" fontName="DejaVu Sans Mono" fontSize="12"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="f7eeaec1-51fd-4c66-a5e1-032ad5ac58be"/>
+	<parameter name="objectName" class="java.lang.String"/>
+	<parameter name="configStr" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="sysType" class="java.lang.Object"/>
+	<field name="zone" class="java.lang.String"/>
+	<field name="position" class="java.lang.String"/>
+	<field name="driven" class="java.lang.Boolean"/>
+	<field name="count" class="java.lang.String"/>
+	<field name="measUnit" class="java.lang.String"/>
+	<field name="note" class="java.lang.String"/>
+	<field name="section" class="java.lang.String"/>
+	<field name="attrMap" class="java.lang.Object"/>
+	<group name="sectionGroup">
+		<groupExpression><![CDATA[$F{section}]]></groupExpression>
+		<groupHeader>
+			<band height="24">
+				<textField pattern="" isBlankWhenNull="true">
+					<reportElement uuid="69f21cce-863e-4e76-9880-d406f9d7916e" mode="Transparent" x="311" y="1" width="179" height="22" forecolor="#000000" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+						<font fontName="GOST type A" size="12" isBold="false" isItalic="true" isUnderline="true" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{section} == null ? "Прочие изделия":$F{section}.equals("Assemblies") ? "Сборочные единицы":$F{section}.equals("Parts") ? "Детали":$F{section}.equals("Purchasable Parts") ? "Покупные изделия":$F{section}.equals("Materials") ? "Материалы"  :""]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band height="841">
+			<textField>
+				<reportElement uuid="4381d375-a02b-4aa2-928f-2f191e380c73" x="242" y="757" width="198" height="72"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" size="16" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{objectName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="de7d75e8-e2b2-4476-833f-a681360358d5" x="58" y="743" width="20" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Изм.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="825d59a1-9ee4-4f9d-b811-879ce2b575b8" x="79" y="743" width="27" height="14"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Лист]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d43ddbb3-8461-451e-a57d-f14f9d36c3c5" x="215" y="743" width="27" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Дата]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="df1608d5-ecb3-4c55-b5cc-91f37ff89520" x="172" y="743" width="42" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Подп.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="aceb4c5b-9787-45a2-b9b4-54bc327f7b09" x="58" y="757" width="48" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Разраб.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ef273dc1-37c4-40fa-b651-f4e0fd69bb2f" x="58" y="770" width="48" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Пров.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="872cb45c-4b6d-44ce-a923-352fed5efb0e" x="58" y="814" width="48" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Утв.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="72fafefd-6333-4ba6-960f-91607a5da9fe" x="58" y="800" width="48" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Н.контр.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8bada388-59ea-4f47-b10b-9d1a491c7775" x="441" y="761" width="42" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Лит.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6616ea1d-0205-4f78-9c36-2d99bc33e0db" x="483" y="761" width="42" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Лист]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="796f8ac5-7738-4e49-9fce-ff3fcb974046" x="525" y="761" width="56" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Листов]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="37cbdf06-f01e-4f1c-a446-b30c89b51e61" stretchType="RelativeToBandHeight" x="56" y="16" width="1" height="812"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="3dc4a015-9bd1-4133-b2b4-313cd975f837" stretchType="RelativeToBandHeight" x="581" y="15" width="1" height="814"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="6200cb95-caf3-4d01-ac41-8319bfa91835" stretchType="RelativeToBandHeight" x="22" y="828" width="560" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="e683448f-99d3-424f-b1e6-6ef05e07afae" stretchType="RelativeToBandHeight" x="56" y="713" width="526" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="1d9bc161-dc8a-4bbd-8c97-d0b3166f1cd8" x="106" y="743" width="66" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[№ Докум.]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="89a09fd8-76cd-48e2-965c-9e622d9708b7" stretchType="RelativeToBandHeight" x="22" y="756" width="560" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="9d913227-0884-4d9f-9eb3-f0fc18c20afe" stretchType="RelativeToBandHeight" x="242" y="714" width="1" height="114"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="b117d759-6239-4060-a01f-54928f07562d" stretchType="RelativeToBandHeight" x="214" y="714" width="1" height="114"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="a734bfdb-5f04-48a8-b147-84caccc2af7b" stretchType="RelativeToBandHeight" x="171" y="714" width="1" height="115"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="3e7bf81a-8829-43ba-9926-77f47fad7236" stretchType="RelativeToBandHeight" x="440" y="756" width="1" height="72"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="fd2632ed-b34c-4135-aace-f92e47c457c5" stretchType="RelativeToBandHeight" x="483" y="756" width="1" height="34"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="32cae52e-9170-44c1-b0a7-bad999146654" stretchType="RelativeToBandHeight" x="525" y="756" width="1" height="34"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="f5564af8-67f3-445a-8fb0-d4e24a0f549a" stretchType="RelativeToBandHeight" x="440" y="773" width="142" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="62b252ae-a01a-4aec-b848-73f2717e2c2f" stretchType="RelativeToBandHeight" x="440" y="789" width="142" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="d1ee443a-c526-4469-ad11-2403f4248b7a" stretchType="RelativeToBandHeight" x="454" y="773" width="1" height="16"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="02bab264-909c-417d-9fe3-ff79aa4cde15" stretchType="RelativeToBandHeight" x="469" y="773" width="1" height="16"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="47e97df2-bad8-4d32-bb4a-d1db2afac97c" stretchType="RelativeToBandHeight" x="56" y="741" width="186" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="51df1140-da22-41de-8fd7-f9648704da68" stretchType="RelativeToBandHeight" x="57" y="727" width="185" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="cb6967c4-cac6-4f22-8758-79950dc7dff7" stretchType="RelativeToBandHeight" x="56" y="769" width="187" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="01f14432-dde0-40f6-b595-6bcf77abd4aa" stretchType="RelativeToBandHeight" x="56" y="784" width="187" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="ef5e8b17-767d-4dc4-9eb1-ea9c1c42898c" stretchType="RelativeToBandHeight" x="56" y="799" width="187" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="d936a235-ad78-4d9a-8a09-6ed3ba16fa06" stretchType="RelativeToBandHeight" x="56" y="813" width="187" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="34b7b795-1711-415c-82d1-538bdd48f4b0" stretchType="RelativeToBandHeight" x="105" y="714" width="1" height="114"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="c730c916-de45-40de-8b9c-15ce3e731b5c" stretchType="RelativeToBandHeight" x="78" y="714" width="1" height="43"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="21964534-e68f-4357-890a-ed12bd9aa084" stretchType="RelativeToBandHeight" x="22" y="15" width="560" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="1596dbac-f613-4c10-92ac-12b91d404f46" mode="Transparent" x="57" y="16" width="17" height="44" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" markup="none">
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Формат]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dd0b080f-bb14-4131-80b7-1cda31e95cab" mode="Transparent" x="74" y="15" width="17" height="45" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" markup="none">
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Зона]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f2dbe27d-3069-44d0-962c-fc387127f0e9" mode="Transparent" x="91" y="15" width="22" height="45" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" markup="none">
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Поз.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="19cae725-adf9-48c4-bf5a-32a352674735" mode="Transparent" x="113" y="16" width="199" height="45" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Обозначение]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bcfe5332-e526-4315-9f24-fdffc1a31576" mode="Transparent" x="312" y="15" width="178" height="45" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Наименование]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b645afb5-5e5c-47eb-8fca-72458e165afd" mode="Transparent" x="490" y="15" width="29" height="45" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" markup="none">
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Поз.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bcce154a-1cc5-43d9-b73e-bf8697bfea54" mode="Transparent" x="519" y="16" width="62" height="44" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Приме-
+чание]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="73f92ed3-d5f0-4b2b-b175-fcf1765edabb" stretchType="RelativeToBandHeight" x="56" y="58" width="526" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="22a3caef-070c-4859-a8ad-71bc1f17b385" stretchType="RelativeToBandHeight" x="73" y="16" width="1" height="698"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="ef64b373-be7a-4138-8acc-ba618ccc0851" stretchType="RelativeToBandHeight" x="90" y="16" width="1" height="698"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="dcec9ce3-4a94-4924-a57e-546588557e72" stretchType="RelativeToBandHeight" x="112" y="16" width="1" height="698"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="dba2fa0d-2c0f-4f0a-9e25-d5466942d445" stretchType="RelativeToBandHeight" x="311" y="16" width="1" height="698"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="c1e2147b-a7bc-412a-aece-7476a64bcfc7" stretchType="RelativeToBandHeight" x="489" y="16" width="1" height="698"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="a7a9d036-fc41-4dde-a63a-7e3ffa914aa7" stretchType="RelativeToBandHeight" x="518" y="16" width="1" height="698"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="6ecc902f-f421-40e0-a8ca-66f87294f5b0" x="56" y="81" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="0965a7d0-0fd3-45ee-be37-df6fe9aa901f" x="56" y="127" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="a3175397-0314-42cb-b505-95e88e3dfc52" x="56" y="104" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="cb3adce6-b0de-49f4-8806-00f654f53ae2" x="56" y="219" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="2d6bf849-6cdf-4b30-b54f-8310e81df30d" x="56" y="242" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="aab84117-1919-465c-9f06-408f6a2a3b1b" x="56" y="150" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="4293587e-f328-49e8-8638-3d3c43846d7e" x="56" y="173" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="836a30d3-04b0-4cbf-87de-e79293f6eb65" x="56" y="196" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="c6521e66-fd2d-4061-800d-9a01848a36c7" x="56" y="265" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="4a07be75-4ca5-4fef-bbb7-83690f745044" x="56" y="288" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="e5a8704e-c6b7-453a-ac9d-5475083074a0" x="56" y="334" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="daaf5642-e035-4f95-ac8e-adf273fbefd9" x="56" y="311" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="d7688b36-9342-49e1-b6b9-2ec3cb9f223a" x="56" y="357" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="9e9b4b67-9a7a-4c1f-8971-7d23801eac17" x="56" y="380" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="3fcff9cb-6d89-4643-9783-207dc77c21d8" x="56" y="403" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="7010a6d8-a60d-4d58-af49-d3d42c838d5b" x="56" y="426" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="8d953c21-b6b3-4434-a912-c47c9379d759" x="56" y="449" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="f2dd1575-436d-4a54-b814-1448423ccb7e" x="56" y="541" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="e59d288f-1ad6-4121-9a5f-46d811d59c5c" x="56" y="518" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="501d18a9-a08b-43c4-9fc1-0ecb974b118a" x="56" y="472" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="26821643-a6db-4a26-81c7-d1d0188d7ca5" x="56" y="587" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="5832efe3-8a4b-4d37-ab54-ea1d2fc79dae" x="56" y="495" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="bf56ed91-345f-49a4-a9f6-ec10f24e0d39" x="56" y="564" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="f3e1f61d-edc0-49f6-a41b-f8dc213cda05" x="56" y="611" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="3833a573-052f-4a0e-80cb-b237ef1066e6" x="56" y="657" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="0e7bc0c1-4ef4-4c0a-bea7-fb7930a93f47" x="56" y="680" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="ad6181ee-a0a0-413d-991e-f72ee248a69d" x="56" y="634" width="526" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="54552953-0979-4818-a2d6-8906cf5ee62d" stretchType="RelativeToBandHeight" x="22" y="421" width="1" height="408"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="7e02aecf-e785-4199-8f65-0d6c3a21f229" stretchType="RelativeToBandHeight" x="22" y="662" width="35" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="32e90446-7e54-4c57-b13b-58b6b1841ce5" stretchType="RelativeToBandHeight" x="22" y="592" width="35" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="f09614fd-54c3-4ebb-b988-bca1205c4266" stretchType="RelativeToBandHeight" x="22" y="515" width="35" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="c3906e59-6117-45eb-bedb-101c2c08056d" stretchType="RelativeToBandHeight" x="22" y="421" width="35" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="9582660e-1764-4bb2-9a6d-daa14c6d2022" stretchType="RelativeToBandHeight" x="36" y="421" width="1" height="408"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="8a71e612-563e-46b6-a801-ee8bf637b62e" mode="Transparent" x="23" y="757" width="14" height="71" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" markup="none">
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Инв. № подл.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6c866b99-8879-4772-9251-148ee1ca2bba" mode="Transparent" x="23" y="663" width="14" height="93" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" markup="none">
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Подп. и дата]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="77bf88b9-b848-4b52-80fc-2738fe66d133" mode="Transparent" x="23" y="593" width="14" height="69" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" markup="none">
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Взам. инв. №]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="25a195ee-5ca6-486e-94f1-148108670737" mode="Transparent" x="23" y="516" width="14" height="76" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" markup="none">
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Инв. № дубл.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5dcd4083-0bdc-4fb8-8f28-1b6d9c7b8f5d" mode="Transparent" x="23" y="422" width="14" height="93" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" markup="none">
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Подп. и дата]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="30e91518-5578-4dfa-8d49-638c1fdbed98" stretchType="RelativeToBandHeight" x="22" y="15" width="1" height="340"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="2fef2e40-40da-422c-bb59-ce3b334dea8b" stretchType="RelativeToBandHeight" x="36" y="15" width="1" height="340"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="3e7c361a-ed0f-47a5-b4d0-94f948b04266" stretchType="RelativeToBandHeight" x="22" y="354" width="35" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="494780fc-6ff0-4691-9e76-0c20e31e417a" stretchType="RelativeToBandHeight" x="22" y="184" width="34" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="fa1e9e2f-3be4-45ff-be1f-94a98fadd5ca" mode="Transparent" x="23" y="185" width="14" height="169" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" markup="none">
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Справ. №]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="386b2ac7-f29b-4ab4-a89b-f845e0f54521" mode="Transparent" x="23" y="15" width="14" height="169" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" markup="none">
+					<font fontName="GOST type A" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Перв. примен.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f67b1f78-e71f-4c29-87f4-7fd3458fe8dc" x="278" y="830" width="55" height="11"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Копировал]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="47c35b40-bd78-499c-94a0-d35171a5ed9e" x="483" y="830" width="55" height="11"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="GOST type A" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Формат А4]]></text>
+			</staticText>
+		</band>
+	</background>
+	<columnHeader>
+		<band height="58"/>
+	</columnHeader>
+	<detail>
+		<band height="23">
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="9aef4f9a-8a3f-47c2-a439-370cd893a041" mode="Transparent" x="74" y="0" width="17" height="23" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="GOST type A" size="12" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{zone}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="503d43b5-36ba-4da7-a5bb-3f174e49f015" mode="Transparent" x="91" y="0" width="22" height="23" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="GOST type A" size="12" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{position}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="d3c1702c-0716-41e9-bd56-01194f77a4d7" mode="Transparent" x="113" y="0" width="199" height="23" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="GOST type A" size="12" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((Map)$F{attrMap}).get("[Designation]")]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="e610431b-8b0d-45d9-b21a-ba48e2982bd9" mode="Transparent" x="312" y="0" width="178" height="23" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="GOST type A" size="12" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{section}==null ||$F{section}.isEmpty()||$F{section}.equals("Materials") ||$F{section}.equals("Purchasable Parts") ? ((Map)$F{attrMap}).get("[Display Name]") : ((Map)$F{attrMap}).get("[Name]")]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="5b610528-ef3d-443d-936c-20dee555ca4d" mode="Transparent" x="490" y="0" width="29" height="23" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="GOST type A" size="12" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="bcba1427-9a62-4f6e-883a-c5341d472759" mode="Transparent" x="519" y="0" width="61" height="23" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="GOST type A" size="12" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{note}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="126"/>
+	</pageFooter>
+</jasperReport>
